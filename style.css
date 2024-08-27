@@ -1,0 +1,366 @@
+/* Importar fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* Estilo global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo del Navbar */
+.navbar {
+    background-color: #198754; /* Color de fondo del navbar */
+    height: 71px; /* Altura del navbar */
+    position: fixed; /* Fija el navbar en la parte superior */
+    width: 100%; /* Asegura que el navbar ocupe todo el ancho */
+    z-index: 999; /* Asegura que esté sobre otros elementos */
+}
+
+/* Ajuste de scroll-padding-top para el contenido */
+html {
+    scroll-padding-top: 71px; /* Ajusta según la altura de tu navbar */
+    scroll-behavior: smooth; /* Suaviza el desplazamiento */
+}
+
+/* Estilo de la marca del navbar (opcional) */
+.navbar-brand img {
+    max-height: 60px; /* Altura máxima del logo */
+    margin-left: 1rem; /* Espaciado a la izquierda */
+    margin-right: 1rem; /* Espaciado a la derecha */
+}
+
+/* Estilo de los enlaces del navbar */
+.navbar .nav-link {
+    color: #ffffff; /* Color del texto del enlace */
+    padding: 0.75rem 1rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de fuente moderado */
+    font-weight: 500; /* Peso de fuente medio */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.navbar .nav-link:hover {
+    color: #000000; /* Color del texto al pasar el mouse */
+}
+
+/* Estilo del menú desplegable en dispositivos móviles */
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        background-color: #343a40; /* Fondo oscuro */
+        border-radius: 8px; /* Bordes redondeados */
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 1rem; /* Espaciado interno */
+        position: absolute; /* Posiciona el menú desplegable */
+        top: 71px; /* Ajusta según la altura del navbar */
+        left: 0;
+        z-index: 9999; /* Asegura que el menú esté por encima de otros elementos */
+        border: 1px solid #444; /* Borde para el menú */
+    }
+
+    .navbar-nav {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    .navbar-nav .nav-item {
+        border-bottom: 1px solid #444; /* Línea divisoria entre los elementos */
+    }
+
+    .navbar-nav .nav-link {
+        color: #f8f9fa; /* Color claro para los enlaces */
+        padding: 1rem; /* Padding para los enlaces */
+        font-size: 1.1rem; /* Tamaño de fuente moderado */
+        font-weight: 500; /* Peso de la fuente para mejor legibilidad */
+        text-align: center; /* Alineación centrada del texto */
+        display: block; /* Asegura que los enlaces ocupen toda la fila */
+        width: 100%; /* Asegura que el enlace ocupe todo el ancho disponible */
+        box-sizing: border-box; /* Incluye padding y border en el ancho total */
+        transition: background-color 0.2s ease; /* Transición suave para el hover */
+        border-radius: 6px; /* Bordes redondeados en los enlaces */
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: #495057; /* Fondo gris oscuro en hover */
+        color: #ffffff; /* Color blanco para el texto en hover */
+    }
+}
+
+/* Estilo del menú desplegable en dispositivos móviles */
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        background-color: #343a40; /* Fondo oscuro */
+        border-radius: 8px; /* Bordes redondeados */
+        width: 100%; /* Ocupa todo el ancho */
+        padding: 1rem; /* Espaciado interno */
+        position: absolute; /* Posiciona el menú */
+        top: 71px; /* Ajuste según la altura del navbar */
+        left: 0;
+        z-index: 9999; /* Por encima de otros elementos */
+        border: 1px solid #444; /* Borde para el menú */
+    }
+
+    .navbar-nav {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    .navbar-nav .nav-item {
+        border-bottom: 1px solid #444; /* Línea divisoria */
+    }
+
+    .navbar-nav .nav-link {
+        color: #f8f9fa; /* Color claro para el texto */
+        padding: 1rem; /* Espaciado interno */
+        font-size: 1.1rem; /* Tamaño de fuente moderado */
+        font-weight: 500; /* Peso de la fuente */
+        text-align: center; /* Alineación centrada */
+        display: block; /* Ocupa toda la fila */
+        width: 100%; /* Ocupa todo el ancho */
+        box-sizing: border-box; /* Incluye padding y border en el ancho total */
+        transition: background-color 0.2s ease; /* Transición suave */
+        border-radius: 6px; /* Bordes redondeados */
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: #495057; /* Fondo gris oscuro */
+        color: #ffffff; /* Color blanco en hover */
+    }
+}
+
+/* Estilo de las secciones */
+.section-title {
+    font-size: 2rem; /* Tamaño de fuente */
+    font-weight: 700; /* Grosor del texto */
+    color: #333; /* Color oscuro */
+    text-align: center; /* Alineación centrada */
+    margin-bottom: 1.5rem; /* Espacio inferior */
+}
+
+/* Estilo para las secciones de productos */
+.product .section-header h2 {
+    font-size: 2rem; /* Tamaño de fuente */
+    font-weight: 700; /* Grosor del texto */
+    color: #333; /* Color oscuro */
+    text-align: center; /* Alineación centrada */
+    margin-bottom: 1.5rem; /* Espacio inferior */
+}
+
+.product .section-header p {
+    font-size: 1.25rem; /* Tamaño de fuente */
+    color: #666; /* Color gris */
+    text-align: center; /* Alineación centrada */
+    margin-bottom: 2rem; /* Espacio inferior */
+}
+
+/* Estilos del Carrusel */
+.carousel-inner img {
+    width: 100%; /* Ajusta el ancho al contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Color de fondo */
+    background-size: 100%, 100%; /* Tamaño del fondo */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 6%; /* Ancho de los controles */
+}
+
+/* Estilo de las tarjetas de productos */
+.card {
+    max-width: 310px; /* Ancho máximo */
+    margin: 0 auto; /* Centra la tarjeta */
+    transition: box-shadow 0.3s ease; /* Transición para la sombra */
+}
+
+.card-img-top {
+    height: 250px; /* Altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra en hover */
+}
+
+/* Estilo de los botones */
+.btn-lg {
+    font-size: 1.25rem; /* Tamaño de fuente */
+    padding: 0.75rem 1.25rem; /* Espaciado interno */
+}
+
+.btn-success {
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+.btn-success:hover {
+    background-color: #28a745; /* Color de fondo en hover */
+    transform: scale(1.05); /* Escala en hover */
+}
+
+/* Estilo del Mapa */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* Relación de aspecto 16:9 */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Sin borde */
+}
+
+/* CSS general para móviles */
+@media (max-width: 767.98px) {
+    iframe {
+        width: 100%;
+        height: 300px; /* Altura ajustada */
+    }
+}
+
+/* Estilo del contacto */
+.contact {
+    padding: 3rem 1.5rem; /* Espaciado interno */
+}
+
+.contact .row {
+    display: flex;
+    align-items: stretch; /* Alinea elementos */
+}
+
+.map-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%; /* Relación de aspecto 16:9 */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.contact-wrapper {
+    background-color: #f8f9fa; /* Color de fondo */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+    display: flex;
+    flex-direction: column;
+}
+
+.map-wrapper {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-height: 450px; /* Altura mínima */
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Sin borde */
+}
+
+.contact-wrapper {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-height: 450px; /* Altura mínima */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaciado vertical */
+}
+
+.contact-wrapper form {
+    flex-grow: 1; /* Permite que el formulario crezca */
+}
+
+.contact-wrapper p {
+    margin-top: 1rem; /* Espaciado superior */
+    color: #6c757d; /* Color del texto */
+}
+
+/* Estilo del botón de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366; /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 50%; /* Forma circular */
+    padding: 15px; /* Espaciado interno */
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Sombra */
+    z-index: 100; /* Por encima de otros elementos */
+    font-size: 35px; /* Tamaño del ícono */
+    text-align: center; /* Alineación centrada */
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    width: 60px; /* Ancho */
+    height: 60px; /* Altura */
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E; /* Color de fondo en hover */
+    color: white; /* Color del texto en hover */
+}
+
+.whatsapp-float::after {
+    content: "Contacta con nosotros";
+    position: absolute;
+    bottom: 70px; /* Espaciado desde el fondo */
+    right: 0;
+    background-color: #333; /* Color de fondo del texto */
+    color: #fff; /* Color del texto */
+    padding: 5px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 12px; /* Tamaño del texto */
+    white-space: nowrap; /* Sin ajuste de línea */
+    display: none; /* Oculto por defecto */
+}
+
+.whatsapp-float:hover::after {
+    display: block; /* Mostrar al pasar el mouse */
+}
+
+/* Ajuste de scroll-padding-top para el navbar */
+html {
+    scroll-padding-top: 71px; /* Ajusta según la altura de tu navbar */
+    scroll-behavior: smooth; /* Suaviza el desplazamiento */
+}
+
+/* Estilos para el formulario de contacto */
+#contactForm input, #contactForm textarea {
+    border-radius: 4px; /* Bordes redondeados en inputs y textarea */
+    padding: 0.75rem; /* Espaciado interno */
+    border: 1px solid #ced4da; /* Borde */
+    width: 100%; /* Ancho completo */
+    margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+#contactForm button {
+    border-radius: 4px; /* Bordes redondeados en el botón */
+    padding: 0.75rem 1.25rem; /* Espaciado interno */
+    background-color: #198754; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: 600; /* Peso de fuente medio */
+    cursor: pointer; /* Cambia el cursor */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+#contactForm button:hover {
+    background-color: #145a32; /* Color de fondo en hover */
+}
+
